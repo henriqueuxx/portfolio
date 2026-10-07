@@ -20,6 +20,7 @@
         var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
         document.documentElement.setAttribute('data-theme', theme);
       } catch (e) {}
+      document.documentElement.classList.add('js');
     })();
   </script>
 
@@ -46,7 +47,6 @@
   <!-- ===== Navegação ===== -->
   <header class="nav" id="topo">
     <div class="wrap nav__inner">
-      <a class="nav__logo" href="#topo" aria-label="Henrique Moraes, voltar ao início"><span class="avatar"></span></a>
       <nav class="nav__links glass" aria-label="Seções da página">
         <a href="#topo" class="is-active">Início</a>
         <a href="#trabalhos">Trabalhos</a>
@@ -55,13 +55,34 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="nav__actions">
-        <button class="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+        <button class="theme-toggle nav__theme" type="button" aria-label="Ativar modo claro" aria-pressed="false">
           <span class="theme-toggle__opt theme-toggle__opt--sun"><svg><use href="#i-sun"/></svg></span>
           <span class="theme-toggle__opt theme-toggle__opt--moon"><svg><use href="#i-moon"/></svg></span>
         </button>
         <a class="btn btn--lime" href="assets/curriculo-henrique-moraes.pdf" download>
           <span>Baixar currículo</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
+        <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu do celular/tablet -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu__links" aria-label="Menu">
+        <a href="#topo" style="--i:0">Início<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#trabalhos" style="--i:1">Trabalhos<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#sobre" style="--i:2">Sobre<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#processo" style="--i:3">Processo<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#contato" style="--i:4">Contato<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </nav>
+      <div class="menu__theme" style="--i:5">
+        <span>Tema</span>
+        <button class="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+          <span class="theme-toggle__opt theme-toggle__opt--sun"><svg><use href="#i-sun"/></svg></span>
+          <span class="theme-toggle__opt theme-toggle__opt--moon"><svg><use href="#i-moon"/></svg></span>
+        </button>
       </div>
     </div>
   </header>
@@ -116,13 +137,13 @@
 
         <div class="work-grid">
           <article class="work-card work-card--a">
-            <div class="work-card__cover" style="--img:url('assets/img/projetos/itau.jpg')"></div>
+            <div class="work-card__cover" style="--img:url('assets/img/projetos/itau.jpg');--pos:28% 50%"></div>
             <div class="work-card__info">
               <div class="work-card__text">
                 <p class="work-card__meta">UX Research · Atendimento digital · EBAC</p>
                 <h3 class="work-card__title">Itaú</h3>
               </div>
-              <a class="arrow-btn" href="https://www.behance.net/henriqueux" target="_blank" rel="noopener" aria-label="Ver projeto Itaú"><svg><use href="#i-arrow"/></svg></a>
+              <a class="arrow-btn" href="itau.html" aria-label="Ver projeto Itaú"><svg><use href="#i-arrow"/></svg></a>
             </div>
           </article>
 

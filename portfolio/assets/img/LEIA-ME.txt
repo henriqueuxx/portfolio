@@ -1,19 +1,13 @@
 IMAGENS DO SITE
 
-1) Fotos (já preparadas no Figma)
-   No arquivo do Figma, página "wariframer", existe o quadro
-   "Exportar imagens do site (selecione e exporte)" acima da Home v3.
-   Selecione as 3 imagens dentro dele (foto, hero-1, hero-2) e clique
-   em Export no painel da direita. Os arquivos já saem com o nome certo:
-     foto.jpg     -> navbar, "Sobre mim" e card do LinkedIn
-     hero-1.jpg   -> pílula da 1ª linha do hero
-     hero-2.jpg   -> pílula da 3ª linha do hero
-   Coloque os três aqui, nesta pasta (assets/img/).
+Já incluídas:
+  foto.jpg               -> "Sobre mim" e card do LinkedIn
+  hero-1.jpg             -> pílula da 1ª linha do hero
+  hero-2.jpg             -> pílula da 3ª linha do hero
+  projetos/itau.jpg      -> capa do Itaú (home e página do projeto)
 
-2) Capas dos projetos (quando estiverem prontas)
-     projetos/itau.jpg
-     projetos/tanasacola.jpg
-     projetos/converto.jpg
-   Enquanto não existirem, o card mostra a área branca, igual ao Figma.
+Faltando (enquanto não existirem, o card mostra a área clara, igual ao Figma):
+  projetos/tanasacola.jpg
+  projetos/converto.jpg
 
-Dica: comprima as imagens em https://squoosh.app antes de subir (JPG, qualidade ~80).
+Dica: JPG com ~1600px de largura, comprimido em https://squoosh.app (qualidade ~80).

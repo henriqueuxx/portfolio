@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Itaú, atendimento digital | Henrique Moraes</title>
+  <meta name="description" content="Estudo de caso em andamento: pesquisa sobre o ecossistema de atendimento digital do Itaú, em parceria com a EBAC.">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Henrique Moraes | UX/UI Designer">
+  <meta property="og:description" content="Projetos, processo e formação de um designer UX/UI que transforma problemas complexos em experiências claras.">
+  <meta property="og:image" content="assets/img/foto.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('tema');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="case.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H9M17 7V15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="currentColor"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M12 2L22 12L12 22L2 12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-behance" viewBox="0 0 55 34"><path fill="currentColor" d="M49.7027 4.51843H33.8882V0H49.7027V4.51843ZM53.5434 27.1106C52.6397 30.0475 49.0249 33.8882 42.0214 33.8882C35.0178 33.8882 29.3698 30.0475 29.3698 21.0107C29.3698 12.1998 34.566 7.68132 41.7954 7.68132C48.799 7.68132 53.0915 11.7479 53.9952 17.6219C54.2211 18.7515 54.2211 20.3329 54.2211 22.5921H36.1474C36.3733 29.8216 44.0547 30.0475 46.5398 27.1106H53.5434ZM36.1474 18.0737H47.4435C47.2176 14.6849 44.9583 13.1034 41.7954 13.1034C38.6325 13.1034 36.8252 14.6849 36.1474 18.0737ZM14.6849 33.8882H0V0H15.8145C28.2402 0.225921 28.4661 12.1998 21.9144 15.5886C29.5957 18.5255 29.8216 33.8882 14.6849 33.8882ZM6.77764 13.5553H14.9108C20.5588 13.5553 21.4625 6.77764 14.233 6.77764H6.77764V13.5553ZM14.459 20.3329H6.77764V27.1106H14.233C21.2366 27.1106 20.7848 20.3329 14.459 20.3329Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 47 47"><path fill="currentColor" d="M23.2981 4.27133C29.511 4.27133 30.2876 4.27132 32.8115 4.46548C39.2185 4.65963 42.1308 7.76604 42.3249 13.9789C42.5191 16.5028 42.5191 17.0853 42.5191 23.2981C42.5191 29.511 42.5191 30.2876 42.3249 32.6174C42.1308 38.8302 39.0244 41.9366 32.8115 42.1308C30.2876 42.3249 29.7051 42.3249 23.2981 42.3249C17.0853 42.3249 16.3087 42.3249 13.9789 42.1308C7.57189 41.9366 4.65963 38.8302 4.46548 32.6174C4.27132 30.0934 4.27133 29.511 4.27133 23.2981C4.27133 17.0853 4.27132 16.3087 4.46548 13.9789C4.65963 7.76604 7.76604 4.65963 13.9789 4.46548C16.3087 4.27132 17.0853 4.27133 23.2981 4.27133ZM23.2981 0C16.8911 0 16.1145 0 13.7847 0.194151C5.24208 0.582453 0.582453 5.24208 0.194151 13.7847C0 16.1145 0 16.8911 0 23.2981C0 29.7051 0 30.4817 0.194151 32.8115C0.582453 41.3542 5.24208 46.0138 13.7847 46.4021C16.1145 46.5963 16.8911 46.5963 23.2981 46.5963C29.7051 46.5963 30.4817 46.5963 32.8115 46.4021C41.3542 46.0138 46.0138 41.3542 46.4021 32.8115C46.5963 30.4817 46.5963 29.7051 46.5963 23.2981C46.5963 16.8911 46.5963 16.1145 46.4021 13.7847C46.0138 5.24208 41.3542 0.582453 32.8115 0.194151C30.4817 0 29.7051 0 23.2981 0ZM23.2981 11.2608C16.697 11.2608 11.2608 16.697 11.2608 23.2981C11.2608 29.8993 16.697 35.3355 23.2981 35.3355C29.8993 35.3355 35.3355 29.8993 35.3355 23.2981C35.3355 16.697 29.8993 11.2608 23.2981 11.2608ZM23.2981 31.0642C19.0268 31.0642 15.5321 27.5695 15.5321 23.2981C15.5321 19.0268 19.0268 15.5321 23.2981 15.5321C27.5695 15.5321 31.0642 19.0268 31.0642 23.2981C31.0642 27.5695 27.5695 31.0642 23.2981 31.0642ZM35.7238 8.15435C34.1706 8.15435 33.0057 9.31925 33.0057 10.8725C33.0057 12.4257 34.1706 13.5906 35.7238 13.5906C37.277 13.5906 38.4419 12.4257 38.4419 10.8725C38.4419 9.31925 37.277 8.15435 35.7238 8.15435Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 43 41"><path fill="currentColor" d="M8.82505 4.41253C8.82505 6.88354 6.88354 8.82505 4.41253 8.82505C1.94151 8.82505 0 6.88354 0 4.41253C0 1.94151 1.94151 0 4.41253 0C6.88354 0 8.82505 1.94151 8.82505 4.41253ZM8.82505 12.3551H0V40.5952H8.82505V12.3551ZM22.9451 12.3551H14.1201V40.5952H22.9451V25.7692C22.9451 17.4736 33.5352 16.7676 33.5352 25.7692V40.5952H42.3602V22.7686C42.3602 8.82505 26.6517 9.35456 22.9451 16.2381V12.3551Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 48 48"><path fill="currentColor" d="M36.6526 3.80762H43.3995L28.6594 20.6546L46 43.5796H32.4225L21.7881 29.6757L9.61989 43.5796H2.86886L18.6349 25.5598L2 3.80762H15.9222L25.5348 16.5163L36.6526 3.80762ZM34.2846 39.5412H38.0232L13.8908 7.63388H9.87892L34.2846 39.5412Z"/></symbol>
+    <symbol id="i-medium" viewBox="0 0 48 48"><path fill="currentColor" d="M48 23.6552C48 30.0138 46.9344 35.1717 45.6194 35.1717C44.3045 35.1717 43.2393 30.0152 43.2393 23.6552C43.2393 17.2952 44.3049 12.1387 45.6194 12.1387C46.9339 12.1387 48 17.2947 48 23.6552ZM41.9254 23.6553C41.9254 30.7539 38.8949 36.5108 35.1565 36.5108C31.4182 36.5108 28.3877 30.7539 28.3877 23.6553C28.3877 16.5567 31.4177 10.7998 35.1561 10.7998C38.8944 10.7998 41.9249 16.5548 41.9249 23.6553ZM27.0749 23.6554C27.0749 31.1968 21.0139 37.3103 13.5377 37.3103C6.06146 37.3103 0 31.1955 0 23.6554C0 16.1153 6.061 10 13.5377 10C21.0143 10 27.0749 16.114 27.0749 23.6554Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== Navegação ===== -->
+  <header class="nav" id="topo">
+    <div class="wrap nav__inner">
+      <nav class="nav__links glass" aria-label="Seções da página">
+        <a href="index.html">Início</a>
+        <a href="index.html#trabalhos" class="is-active">Trabalhos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#processo">Processo</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle nav__theme" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+          <span class="theme-toggle__opt theme-toggle__opt--sun"><svg><use href="#i-sun"/></svg></span>
+          <span class="theme-toggle__opt theme-toggle__opt--moon"><svg><use href="#i-moon"/></svg></span>
+        </button>
+        <a class="btn btn--lime" href="assets/curriculo-henrique-moraes.pdf" download>
+          <span>Baixar currículo</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu do celular/tablet -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu__links" aria-label="Menu">
+        <a href="index.html" style="--i:0">Início<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="index.html#trabalhos" style="--i:1">Trabalhos<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="index.html#sobre" style="--i:2">Sobre<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="index.html#processo" style="--i:3">Processo<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="index.html#contato" style="--i:4">Contato<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </nav>
+      <div class="menu__theme" style="--i:5">
+        <span>Tema</span>
+        <button class="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+          <span class="theme-toggle__opt theme-toggle__opt--sun"><svg><use href="#i-sun"/></svg></span>
+          <span class="theme-toggle__opt theme-toggle__opt--moon"><svg><use href="#i-moon"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="c-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v6H5a1 1 0 0 1-1-1v-5Zm16 0h-3v6h2a1 1 0 0 0 1-1v-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="c-signal" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M3 3l18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="c-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h12v4M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9H5a2 2 0 0 1-2-2Zm14 6h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="c-bank" viewBox="0 0 24 24"><path d="M3 10h18L12 4 3 10Zm2 0v8m4-8v8m6-8v8m4-8v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="c-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Zm0 6v5m0 3h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <main id="conteudo" class="case">
+    <!-- Aviso de página provisória -->
+    <div class="case-banner">
+      <div class="wrap case-banner__inner">
+        <a class="text-link case-back" href="index.html#trabalhos"><svg aria-hidden="true"><use href="#i-arrow"/></svg><span>Voltar para trabalhos</span></a>
+        <p class="dot-label">Estudo de caso em construção: esta é uma prévia do projeto</p>
+      </div>
+    </div>
+
+    <!-- 01 Capa -->
+    <section class="c-cover" aria-label="Capa do projeto">
+      <div class="c-cover__img" role="img" aria-label="Projeto em parceria Itaú e EBAC: mulher segurando um cartão laranja do Itaú"></div>
+    </section>
+
+    <!-- Ficha -->
+    <section class="c-facts wrap" aria-label="Ficha do projeto">
+      <h1 class="c-facts__title">Itaú <span class="serif accent">atendimento digital</span></h1>
+      <dl class="c-facts__list">
+        <div><dt>Parceria</dt><dd>EBAC e Itaú</dd></div>
+        <div><dt>Foco</dt><dd>Ecossistema de atendimento ao cliente</dd></div>
+        <div><dt>Etapa atual</dt><dd>Definição</dd></div>
+        <div><dt>Status</dt><dd><span class="tag tag--lime">Em andamento</span></dd></div>
+      </dl>
+      <div class="c-facts__cta">
+        <a class="btn btn--lime" href="https://www.behance.net/henriqueux" target="_blank" rel="noopener">
+          <svg class="btn__brand" aria-hidden="true" viewBox="0 0 55 34"><use href="#i-behance"/></svg><span>Ver projeto no Behance</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <p>Prefere ver tudo de uma vez? A versão completa do projeto também está no Behance.</p>
+      </div>
+    </section>
+
+    <!-- 02 Processo do projeto -->
+    <section class="c-intro" aria-labelledby="c-intro-t">
+      <div class="wrap c-intro__inner">
+        <div class="c-intro__shape">
+          <h2 id="c-intro-t" class="c-intro__kicker"><strong>Ebac e Itaú</strong> Descobrir problemas e desenvolver soluções.</h2>
+          <p class="c-intro__text"><strong>Desenvolvido em parceria entre a EBAC e o Itaú,</strong> este projeto teve como propósito estruturar uma solução ao cliente, entregando uma experiência alinhada às expectativas atuais e consolidando um ecossistema integrado, focado em ouvir e atender às necessidades dos usuários.</p>
+        </div>
+        <p class="c-chip-card">Processo<br>do projeto <svg aria-hidden="true"><use href="#i-arrow"/></svg></p>
+      </div>
+    </section>
+
+    <!-- Etapas -->
+    <section class="c-phases" aria-labelledby="c-phases-t">
+      <h2 id="c-phases-t" class="sr-only">Etapas e métodos</h2>
+      <div class="wrap c-phases__grid">
+        <div class="c-phase">
+          <p class="c-phase__name">Descoberta</p>
+          <ul class="c-tiles">
+            <li class="t-o1" style="--r:-6deg">Desk Research</li>
+            <li class="t-n t-big" style="--r:4deg">Atendimento digital</li>
+            <li class="t-o2" style="--r:5deg">Matriz CSD</li>
+            <li class="t-o2" style="--r:-8deg">Proto personas</li>
+            <li class="t-o1" style="--r:-12deg">Mapeamento de stakeholders</li>
+            <li class="t-o1" style="--r:6deg">Benchmarking</li>
+          </ul>
+        </div>
+        <div class="c-phase">
+          <p class="c-phase__name">Definição</p>
+          <ul class="c-tiles">
+            <li class="t-y" style="--r:4deg">Questionário com usuários</li>
+            <li class="t-y" style="--r:-6deg">Persona e mapa de empatia</li>
+            <li class="t-y" style="--r:3deg">Jornada do usuário</li>
+          </ul>
+        </div>
+        <div class="c-phase">
+          <p class="c-phase__name">Ideação</p>
+          <ul class="c-tiles">
+            <li class="t-n" style="--r:-4deg">Ponto de vista (POV)</li>
+            <li class="t-n" style="--r:6deg">Principais insights</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Objetivo -->
+    <section class="c-goal" aria-labelledby="c-goal-t">
+      <div class="wrap c-goal__inner">
+        <h2 id="c-goal-t" class="c-goal__kicker">Objetivo da pesquisa</h2>
+        <blockquote class="c-goal__quote">“Ter uma solução que englobe todos os canais digitais de contato com o cliente, formando assim um ecossistema uniforme.”</blockquote>
+      </div>
+    </section>
+
+    <!-- Principais problemas -->
+    <section class="c-dark" aria-labelledby="c-prob-t">
+      <div class="wrap">
+        <p class="c-tags"><span class="c-tag">Desk Research</span><span class="c-phase-label">Descoberta</span></p>
+        <h2 id="c-prob-t" class="c-title c-title--orange">Principais<br>problemas do Itaú</h2>
+        <div class="c-problems">
+          <article class="c-problem"><span class="c-ico"><svg><use href="#c-headset"/></svg></span><h3>Problemas no atendimento ao cliente</h3><p>Reclamações sobre atendimento inadequado, falta de retorno e dificuldades de comunicação foram registradas, inclusive no segmento Personnalité. <span class="c-src">Reclame Aqui</span></p></article>
+          <article class="c-problem"><span class="c-ico"><svg><use href="#c-signal"/></svg></span><h3>Instabilidades nos canais digitais</h3><p>Clientes relataram dificuldades para acessar contas, realizar transações e visualizar extratos devido a falhas técnicas no aplicativo e no site do banco. <span class="c-src">Procon SP</span></p></article>
+          <article class="c-problem"><span class="c-ico"><svg><use href="#c-wallet"/></svg></span><h3>Erros em saldos e transações</h3><p>Houve casos em que correntistas encontraram saldos zerados, negativos ou depósitos indevidos em suas contas, além de saques não identificados. <span class="c-src">Migalhas</span></p></article>
+          <article class="c-problem"><span class="c-ico"><svg><use href="#c-bank"/></svg></span><h3>Redução de agências e impacto no atendimento</h3><p>O fechamento de agências físicas e a redução de postos de trabalho resultaram em sobrecarga para os funcionários remanescentes e em filas e demora no atendimento para os clientes. <span class="c-src">Contraf-CUT</span></p></article>
+          <article class="c-problem"><span class="c-ico"><svg><use href="#c-alert"/></svg></span><h3>Notificações de órgãos de defesa do consumidor</h3><p>O Procon SP notificou o Itaú por falhas em aplicativos e plataformas, exigindo explicações sobre os problemas enfrentados pelos consumidores. <span class="c-src">Procon SP · Agência Brasil</span></p></article>
+          <article class="c-problem c-problem--hl"><span class="c-pill">O que isso mostra</span><h3>O atendimento é o ponto mais crítico.</h3><p>Canais instáveis e menos agências levam o cliente a um atendimento que nem sempre resolve.</p></article>
+        </div>
+        <p class="c-freq-label">Problemas mais frequentes</p>
+        <ul class="c-freq">
+          <li>Dúvidas e solicitações de informações</li><li>Segurança e fraudes</li><li>Bloqueio e desbloqueio de contas</li><li>Problemas com cartões de crédito</li><li>Experiência e insatisfação</li><li>Produtos e serviços bancários</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reclame Aqui -->
+    <section class="c-light" aria-labelledby="c-ra-t">
+      <div class="wrap c-split">
+        <div>
+          <h2 id="c-ra-t" class="c-title">Problemas nos canais<br>de atendimento.</h2>
+          <p class="c-body">Os clientes relatam dificuldades para negociar suas dívidas pelos canais de atendimento e realizar o pagamento de boletos, tornando esses processos pouco acessíveis e práticos.</p>
+        </div>
+        <div class="c-ra">
+          <p class="c-ra__title">Reclame Aqui</p>
+          <dl class="c-stats">
+            <div><dt>19.318</dt><dd>Reclamações recebidas</dd></div>
+            <div><dt>96,4%</dt><dd>Reclamações respondidas</dd></div>
+            <div><dt>85,5%</dt><dd>Reclamações resolvidas</dd></div>
+            <div><dt>74,2%</dt><dd>Voltariam a fazer negócio</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- IA no Itaú -->
+    <section class="c-light c-light--alt" aria-labelledby="c-ia-t">
+      <div class="wrap">
+        <h2 id="c-ia-t" class="c-title">IA no Itaú</h2>
+        <div class="c-numbers">
+          <div><strong>72%</strong><span>dos atendimentos digitalizados com o uso de IA</span></div>
+          <div><strong>60%</strong><span>desses atendimentos resolvidos integralmente com IA</span></div>
+          <div><strong>71</strong><span>de NPS transacional</span></div>
+          <div><strong>+10 mi</strong><span>de conversas por mês com o chatbot</span></div>
+        </div>
+        <div class="c-columns">
+          <p>Para melhorar o atendimento ao cliente, o Itaú Unibanco fez um investimento significativo em métodos, dados, analytics e Inteligência Artificial. As plataformas do banco foram modernizadas para proporcionar atendimentos integrados em qualquer canal, e todas as interações passaram a ser transcritas e categorizadas para entender e atuar proativamente nas necessidades dos clientes.</p>
+          <p>De acordo com o estudo, 78% dos brasileiros consideram a precisão das informações e soluções oferecidas como o principal critério de qualidade no atendimento digital. Ao mesmo tempo, mais da metade dos entrevistados (52%) já espera que os assistentes virtuais consigam identificar e se adaptar ao humor do cliente durante a interação.</p>
+        </div>
+        <h3 class="c-subtitle">Automações e IA nos bancos</h3>
+        <div class="c-columns">
+          <p>Segundo estudo divulgado pelo Finsiders, 85% dos bancos têm atendimento automatizado no WhatsApp, 30% têm chat online no site e apenas 25% oferecem atendimento pelo Facebook Messenger. Dos 23 bancos com WhatsApp, só quatro (17,4%) permitem abrir conta pelo aplicativo: BB, Banco Pan, Itaú e Paraná Banco.</p>
+          <p>Pesquisa da ServiceNow aponta que 84% dos consumidores preferem falar com um atendente humano por telefone, mas estão se adaptando às interações com IA. Os sinais que mostram que é uma IA: 72% notam respostas repetitivas, 65% apontam a incapacidade de entender emoções e 58% percebem dificuldade em entender o contexto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perguntas e hipóteses -->
+    <section class="c-light" aria-labelledby="c-q-t">
+      <div class="wrap c-qh">
+        <div>
+          <h2 id="c-q-t" class="c-title">Perguntas</h2>
+          <ol class="c-qlist">
+            <li>Em quais situações os clientes prefeririam interagir diretamente com um atendente humano?</li>
+            <li>Quais são as principais barreiras que os clientes enfrentam ao tentar acessar atendimento humano nos canais do Itaú?</li>
+            <li>Os clientes conseguem resolver seus problemas por chatbots e menus de voz sem muita dificuldade?</li>
+            <li>Quais funcionalidades os clientes sentem falta ou gostariam que fossem melhoradas no aplicativo ou nos canais de atendimento digital do Itaú?</li>
+          </ol>
+        </div>
+        <div>
+          <h2 class="c-title">Hipóteses</h2>
+          <ul class="c-hlist">
+            <li>Resolução de problemas técnicos no aplicativo, disputas de transações, renegociação de dívidas ou ajustes personalizados em contratos.</li>
+            <li>O direcionamento direto para chats excessivamente automatizados.</li>
+            <li>Os chatbots geralmente lidam apenas com problemas simples e pré-definidos, como consulta de saldo ou agendamento de pagamentos.</li>
+            <li>Maior estabilidade e performance, notificações mais ágeis e customizáveis.</li>
+            <li>Demora no atendimento e informações inconsistentes.</li>
+            <li>Maior acessibilidade ao atendimento humano.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matriz CSD -->
+    <section class="c-dark" aria-labelledby="c-csd-t">
+      <div class="wrap">
+        <h2 id="c-csd-t" class="c-title c-title--orange">Matriz CSD</h2>
+        <p class="c-lead">O que já sabemos, o que supomos e o que ainda vamos descobrir.</p>
+        <div class="c-csd">
+          <div class="c-csd__col">
+            <article><h3 class="c-orange">84%</h3><p>dos consumidores preferem falar com um atendente humano por telefone (ServiceNow).</p></article>
+            <article><h3>Chatbots limitados</h3><p>resolvem só problemas simples e pré-definidos, como consulta de saldo.</p></article>
+            <article><h3>Escalar é difícil</h3><p>muitos clientes relatam frustração ao tentar chegar a um atendente humano.</p></article>
+            <article><h3>Canais instáveis</h3><p>falhas no app e no site levaram o Procon SP a notificar o Itaú.</p></article>
+            <p class="c-csd__label">Certezas</p>
+          </div>
+          <div class="c-csd__col">
+            <p class="c-csd__label">Suposições</p>
+            <article><h3>Excesso de automação</h3><p>o cliente é direcionado direto para chats automatizados.</p></article>
+            <article><h3>Pouco acesso ao humano</h3><p>o atendimento é demorado e as informações são inconsistentes.</p></article>
+            <article><h3>Casos complexos</h3><p>o cliente prefere um humano para disputas, renegociação de dívidas e contratos.</p></article>
+          </div>
+          <div class="c-csd__col">
+            <article><h3>Barreiras</h3><p>Quais são as principais barreiras para acessar o atendimento humano?</p></article>
+            <article><h3>Autonomia</h3><p>Os clientes conseguem resolver seus problemas por chatbots e menus de voz?</p></article>
+            <article><h3>Momento certo</h3><p>Em quais situações o cliente prefere falar com um atendente humano?</p></article>
+            <p class="c-csd__label">Dúvidas</p>
+          </div>
+          <div class="c-csd__col">
+            <p class="c-csd__label">E depois da matriz?</p>
+            <ol class="c-next">
+              <li><strong>Benchmark</strong>Comparar Santander, Bradesco e Nubank para validar as suposições.</li>
+              <li><strong>Questionário e escuta ativa</strong>Conversar com clientes e ouvir sem julgar, para responder às dúvidas.</li>
+              <li><strong>Persona e jornada</strong>Transformar as certezas em persona, mapa de empatia e jornada.</li>
+            </ol>
+            <div class="c-impact">
+              <h3>Onde vai impactar</h3>
+              <ul><li>App Itaú</li><li>Internet banking</li><li>Assistente virtual</li><li>WhatsApp</li><li>Telefone e ouvidoria</li><li>E-mail</li></ul>
+              <p>Todos os canais de atendimento, conectados em um só ecossistema, com acesso fácil a um atendente humano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmark -->
+    <section class="c-light" aria-labelledby="c-bm-t">
+      <div class="wrap">
+        <p class="c-tags"><span class="c-tag">Benchmark</span></p>
+        <h2 id="c-bm-t" class="sr-only">Benchmark</h2>
+        <div class="c-table-wrap" tabindex="0" role="region" aria-label="Tabela de benchmark, role para o lado">
+          <table class="c-table">
+            <thead><tr><th scope="col" class="h-0">Aspecto geral</th><th scope="col" class="h-1">Interface e usabilidade</th><th scope="col" class="h-2">Funcionalidades</th><th scope="col" class="h-3">Atendimento digital</th><th scope="col" class="h-4">Segurança</th><th scope="col" class="h-5">Experiência geral</th></tr></thead>
+            <tbody>
+              <tr class="is-itau"><th scope="row">Itaú</th><td class="h-1">Design funcional, mas complexo; algumas áreas não são intuitivas para novos usuários.</td><td class="h-2">PIX, renegociação, investimentos e gestão de cartões.</td><td class="h-3">Chatbot eficiente, mas limitado em questões complexas; atendimento humano disponível.</td><td class="h-4">Biometria, token digital e autenticação multifator.</td><td class="h-5">Abrangente, mas pode ser complexo e pesado para usuários casuais.</td></tr>
+              <tr><th scope="row">Santander</th><td>Mais simplificado, mas ainda com excesso de informações na tela inicial.</td><td>PIX, cartões, empréstimos, investimentos e programa de pontos Esfera.</td><td>Chatbot básico; direciona para atendente humano rapidamente.</td><td>Biometria, senha segura e SMS para autenticação.</td><td>Interface amigável, mas falta fluidez em alguns fluxos.</td></tr>
+              <tr><th scope="row">Bradesco</th><td>Tradicional, com excesso de elementos, mas bem organizado para tarefas básicas.</td><td>PIX, boletos, consórcios e seguro; foco no atendimento empresarial e pessoal.</td><td>Chatbot funcional, mas pode ser confuso; integração com call center.</td><td>Biometria, autenticação por token e SMS; robusto, mas com falhas ocasionais.</td><td>Experiência tradicional e abrangente; atende melhor públicos menos digitais.</td></tr>
+              <tr><th scope="row">Nubank</th><td>Interface limpa e intuitiva; navegação simples e direta.</td><td>PIX, cartão de crédito e débito, empréstimos sem burocracia e investimentos simples.</td><td>Atendimento humanizado diretamente pelo app, com respostas rápidas.</td><td>Biometria, reconhecimento facial e autenticação multifator.</td><td>Leve, simples e direto ao ponto; indicado para jovens e usuários digitais.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section class="c-light c-light--alt" aria-labelledby="c-in-t">
+      <div class="wrap c-insights">
+        <h2 id="c-in-t" class="c-insights__title">Principais <strong>insights</strong></h2>
+        <ul class="c-insights__list">
+          <li style="--r:-5deg">Pagamentos podem ser feitos diretamente pelo app, mas o processo nem sempre é intuitivo para todos os usuários.</li>
+          <li style="--r:4deg">O Itaú oferece opções variadas, como pagamento à vista, parcelado e via PIX, o que é um ponto positivo.</li>
+          <li style="--r:3deg">A segurança, apesar de robusta, gera dificuldades para alguns clientes na autenticação (biometria ou tokens).</li>
+          <li style="--r:-3deg">Chatbots e sistemas automatizados falham em atender demandas complexas, criando uma lacuna para interações humanas.</li>
+          <li style="--r:5deg">Muitos clientes relatam frustração ao tentar escalar problemas para um atendente humano.</li>
+          <li style="--r:-4deg">Promover maior transparência com os clientes sobre prazos e soluções para problemas reportados.</li>
+          <li style="--r:6deg">Problemas técnicos, como falhas no app e no site, dificultam o acesso aos serviços e aumentam a insatisfação.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Como ouvimos -->
+    <section class="c-navy" aria-labelledby="c-ouv-t">
+      <div class="wrap">
+        <p class="c-phase-label c-phase-label--y">Definição</p>
+        <h2 id="c-ouv-t" class="c-title c-title--white">Como ouvimos os<br>clientes do Itaú</h2>
+        <div class="c-sources">
+          <article class="c-source"><h3>Desk Research</h3><p class="c-source__sub">Fontes públicas</p><p>Procon, Reclame Aqui, ServiceNow e estudos de mercado sobre atendimento digital.</p></article>
+          <article class="c-source c-source--orange"><h3>Questionário</h3><p class="c-source__sub">Online</p><p>Questionário online (Google Forms) sobre perfil, uso do app, atendimento e segurança.</p></article>
+          <article class="c-source"><h3>Entrevistas</h3><p class="c-source__sub">Com clientes</p><p>Conversas individuais com clientes do Itaú, usando escuta ativa.</p></article>
+          <article class="c-source c-source--orange"><h3>Reddit</h3><p class="c-source__sub">Escuta em redes</p><p>Comentários espontâneos de usuários sobre os sistemas do Itaú.</p></article>
+        </div>
+        <p class="c-navy__lead">Quatro fontes, do macro ao pessoal: dados públicos, comparação com concorrentes e a voz direta de quem usa o app.</p>
+        <p class="c-navy__note">Amostra pequena (5 respostas): os números indicam tendências e ajudam a validar as hipóteses da Matriz CSD; não são representativos de toda a base de clientes.</p>
+      </div>
+    </section>
+
+    <!-- Quem respondeu -->
+    <section class="c-light c-who" aria-labelledby="c-who-t">
+      <div class="wrap c-who__inner">
+        <div>
+          <h2 id="c-who-t" class="c-title c-title--navy">Quem respondeu:<br>jovem, cliente e recente.</h2>
+          <div class="c-who__stats">
+            <p><strong class="c-navy-t">50%</strong>dos clientes estão no banco há menos de 1 ano</p>
+            <p><strong class="c-orange">80%</strong>dos participantes são clientes Itaú</p>
+          </div>
+          <p class="c-who__src">Fonte: questionário online.</p>
+        </div>
+        <figure class="c-donut" aria-label="Faixa etária: 60% de 18 a 25 anos, 20% de 26 a 35 anos e 20% de 36 a 45 anos">
+          <div class="c-donut__ring"><span class="c-donut__center">80% clientes Itaú</span></div>
+          <figcaption>
+            <span><i style="--c:#FF6101"></i><strong>60%</strong> 18 a 25 anos</span>
+            <span><i style="--c:#FF8A00"></i><strong>20%</strong> 26 a 35 anos</span>
+            <span><i style="--c:#FFA31A"></i><strong>20%</strong> 36 a 45 anos</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Em construção -->
+    <section class="c-soon" aria-labelledby="c-soon-t">
+      <div class="wrap c-soon__inner">
+        <p class="dot-label">Em andamento</p>
+        <h2 id="c-soon-t" class="title"><span>Próximas</span> <span class="serif accent">etapas</span></h2>
+        <p class="lead">Persona, mapa de empatia, jornada do usuário, ponto de vista e as soluções entram aqui assim que o projeto avançar.</p>
+        <a class="btn btn--outline" href="index.html#trabalhos"><span>Ver outros projetos</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <section class="contact contact--case" aria-label="Rodapé">
+      <div class="wrap contact__inner">
+        <hr class="rule">
+        <footer class="footer">
+          <p class="footer__logo">Henrique</p>
+          <p class="footer__copy">© <span data-ano>2026</span>. Todos os direitos reservados</p>
+          <ul class="footer__social">
+            <li><a href="https://www.behance.net/henriqueux" target="_blank" rel="noopener">Behance</a></li>
+            <li><a href="https://www.linkedin.com/in/henrique-moraes-705837306/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/henriqueux/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://medium.com/@Henriqueux" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="https://x.com/henriqueuxx" target="_blank" rel="noopener">X</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
