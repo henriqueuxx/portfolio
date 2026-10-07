@@ -1,0 +1,12 @@
+Coloque aqui as suas imagens com estes nomes exatos (JPG):
+
+foto.jpg                  -> sua foto (logo da navbar, card "Sobre mim" e card do LinkedIn)
+hero-1.jpg                -> pílula de foto da primeira linha do hero
+hero-2.jpg                -> pílula de foto da terceira linha do hero
+instagram.jpg             -> fundo do card do Instagram (opcional)
+projetos/itau.jpg         -> capa do projeto Itaú
+projetos/tanasacola.jpg   -> capa do projeto Tá na Sacola
+projetos/converto.jpg     -> capa do projeto Converto
+
+Enquanto uma imagem não existir, o site mostra um degradê no lugar.
+Dica: exporte do Figma em 2x e comprima em https://squoosh.app antes de subir.
